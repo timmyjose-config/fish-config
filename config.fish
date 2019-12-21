@@ -40,3 +40,5 @@ alias pgstop="pg_ctl -D ~/.local/postgresdb stop"
 alias pgrestart="pg_ctl -D ~/.local/postgresdb restart"
 alias pgstatus="pg_ctl -D ~/.local/postgresdb status"
 
+## rbenv configuration
+status --is-interactive; and source (rbenv init -|psub)
