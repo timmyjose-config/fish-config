@@ -1,13 +1,14 @@
-# set default terminal type
+set default terminal type
 set -Ux TERM "xterm-256color"
 
 # set up custom PATHs
-set -x PATH ~/Library/Java/JavaVirtualMachines/openjdk-14/Contents/Home/bin $PATH
+set -x PATH "~/dev/forks/openjdk/jdk-jdk/build/macosx-x86_64-server-release/jdk/bin"
 set -x PATH ~/.cargo/bin $PATH
 set -x PATH /usr/local/Cellar/gcc/9.2.0/bin/ $PATH
 set -x PATH ~/Software/Idris2 $PATH
 set -x PATH ~/.local/bin $PATH
 set -x PATH ~/.cabal/bin $PATH
+set -x JAVA_HOME "~/dev/forks/openjdk/jdk-jdk/build/macosx-x86_64-server-release/jdk/bin"
 
 ## opam config
 eval (opam env)
@@ -42,3 +43,6 @@ alias pgstatus="pg_ctl -D ~/.local/postgresdb status"
 
 ## rbenv configuration
 status --is-interactive; and source (rbenv init -|psub)
+
+# configure paths for Crafting Interpreters
+set -x PATH /Users/z0ltan/dev/forks/craftinginterpreters $PATH
